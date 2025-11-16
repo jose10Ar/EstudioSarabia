@@ -1,0 +1,140 @@
+:root {
+    color-scheme: dark;
+    --bg: radial-gradient(circle at top, #13203a 0%, #0b1426 60%, #060b15 100%);
+    --surface: rgba(255, 255, 255, 0.04);
+    --accent: #2a7de1;
+    --accent-strong: #205fb3;
+    --text: #f4f7ff;
+    --muted: rgba(244, 247, 255, 0.65);
+    --radius: 18px;
+    --shadow: 0 16px 36px rgba(7, 14, 26, 0.4);
+    font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    display: grid;
+    place-items: center;
+    padding: 2.5rem;
+}
+
+main {
+    width: min(960px, 100%);
+    background: var(--surface);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(2.5rem, 6vw, 3.5rem);
+    backdrop-filter: blur(20px);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+}
+
+h1 {
+    font-family: "Libre Baskerville", "Georgia", serif;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.actions {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+button,
+a.button {
+    appearance: none;
+    border: none;
+    border-radius: 999px;
+    padding: 0.85rem 1.8rem;
+    font: 600 0.95rem/1 "Poppins", "Segoe UI", sans-serif;
+    cursor: pointer;
+    transition: transform 200ms ease, box-shadow 200ms ease;
+    text-decoration: none;
+}
+
+button.primary,
+a.button.primary {
+    background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+    color: #fff;
+    box-shadow: 0 14px 28px rgba(32, 95, 179, 0.35);
+}
+
+button.secondary,
+a.button.secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+button:hover,
+a.button:hover {
+    transform: translateY(-2px);
+}
+
+.features {
+    margin: 3rem 0 0;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.feature {
+    padding: 1.8rem;
+    border-radius: var(--radius);
+    background: rgba(42, 125, 225, 0.14);
+}
+
+.feature h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.15rem;
+}
+
+.feature p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+footer {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+@media (max-width: 720px) {
+    body {
+        padding: 1.5rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
