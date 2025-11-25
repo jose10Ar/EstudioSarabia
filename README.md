@@ -111,7 +111,7 @@ Los colores principales están definidos en `assets/css/main.css` como variables
 - **Email**: estudiosarabiaasoc@gmail.com
 - **Teléfono**: (+54) 351 631 6225
 - **WhatsApp**: [+54 351 631 6225](https://wa.me/543516316225)
-- **Dirección**: Caseros 365, Piso 2, Córdoba, Argentina
+- **Dirección**: Corrientes N°91 Oficina 15, Córdoba Capital, Argentina
 
 ## 📄 Licencia
 
