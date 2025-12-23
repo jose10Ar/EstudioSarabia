@@ -112,11 +112,12 @@ input[type="submit"]:hover {
 .site-header__inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     min-height: 74px;
     width: min(100%, var(--max-width));
     margin: 0 auto;
     padding: 0 clamp(1.2rem, 3vw, 2.5rem);
+    gap: 12rem;
 }
 
 .brand {
@@ -127,10 +128,12 @@ input[type="submit"]:hover {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.85rem;
+    margin-right: 80px;
+
 }
 
 .brand span {
-    font-size: 1.05rem;
+    font-size: 1rem;
     letter-spacing: 0.12em;
 }
 
