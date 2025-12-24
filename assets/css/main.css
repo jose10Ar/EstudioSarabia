@@ -129,12 +129,20 @@ input[type="submit"]:hover {
     font-weight: 700;
     font-size: 0.85rem;
     margin-right: 80px;
-
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .brand span {
     font-size: 1rem;
     letter-spacing: 0.12em;
+}
+
+/* Separación ligera entre apellidos en la marca del header.
+   No cambia color ni subrayado; sólo añade espacio entre palabras. */
+.site-header .brand span:first-child {
+    word-spacing: 0.28rem;
 }
 
 .site-nav {
@@ -719,6 +727,15 @@ blockquote strong {
         gap: 1rem;
         padding-top: 1.2rem;
         padding-bottom: 1.2rem;
+    }
+
+    .brand {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .brand span {
+        font-size: 0.95rem;
     }
 
     .site-nav {
