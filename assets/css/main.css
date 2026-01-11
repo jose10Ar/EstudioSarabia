@@ -797,6 +797,11 @@ blockquote strong {
 }
 
 @media (max-width: 640px) {
+  .hero__title {
+    white-space: normal;
+    font-size: clamp(1.6rem, 6vw, 2.2rem);
+  }
+
   .hero__lead {
     font-size: 1.05rem;
   }
