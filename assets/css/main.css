@@ -32,12 +32,10 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-base);
-  background: radial-gradient(
-    circle at top,
-    #13203a 0%,
-    #0b1426 55%,
-    #060b15 100%
-  );
+  background: radial-gradient(circle at top,
+      #13203a 0%,
+      #0b1426 55%,
+      #060b15 100%);
   color: var(--color-text-on-dark);
 }
 
@@ -66,11 +64,9 @@ button,
 input[type="submit"] {
   appearance: none;
   border: none;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary),
-    var(--color-primary-dark)
-  );
+  background: linear-gradient(135deg,
+      var(--color-primary),
+      var(--color-primary-dark));
   color: #fff;
   font: 600 0.95rem/1 var(--font-base);
   padding: 0.9rem 1.8rem;
@@ -192,7 +188,7 @@ input[type="submit"]:hover {
 .hero {
   padding: clamp(8rem, 15vw, 12rem) 0;
   min-height: 90vh;
-  background-image: url("../../images/Geminimage3.png");
+  background-image: url("../../images/Palacio3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -203,7 +199,7 @@ input[type="submit"]:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(15, 23, 42, 0.3);
   z-index: 1;
 }
 
@@ -231,9 +227,10 @@ input[type="submit"]:hover {
 
 .hero__title {
   font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-size: clamp(1.8rem, 4.5vw, 3.2rem);
   line-height: 1.18;
   margin: 1rem 0 1.5rem;
+  white-space: nowrap;
 }
 
 .hero__lead {
@@ -362,11 +359,9 @@ input[type="submit"]:hover {
 .highlight {
   border-radius: var(--radius-lg);
   padding: clamp(2rem, 4vw, 3rem);
-  background: linear-gradient(
-    145deg,
-    rgba(42, 125, 225, 0.18),
-    rgba(32, 95, 179, 0.08)
-  );
+  background: linear-gradient(145deg,
+      rgba(42, 125, 225, 0.18),
+      rgba(32, 95, 179, 0.08));
   color: var(--color-text-on-dark);
   box-shadow: var(--shadow-sm);
 }
@@ -458,6 +453,7 @@ input[type="submit"]:hover {
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
 }
+
 /* Nota: anteriormente aquí se añadieron reglas CSS para ocultar enlaces a landing.html
    cuando se aplicó una desactivación temporal. Se eliminaron porque los enlaces
    fueron quitados permanentemente del HTML. */
