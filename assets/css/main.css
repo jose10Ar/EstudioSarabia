@@ -218,11 +218,13 @@ input[type="submit"]:hover {
   gap: 0.5rem;
   padding: 0.4rem 0.9rem;
   border-radius: 999px;
-  background: rgba(42, 125, 225, 0.18);
-  color: var(--color-muted);
+  background: rgba(42, 125, 225, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
   letter-spacing: 0.14em;
   font-size: 0.75rem;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .hero__title {
