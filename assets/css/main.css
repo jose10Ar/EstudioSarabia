@@ -113,8 +113,7 @@ input[type="submit"]:hover {
   position: sticky;
   top: 0;
   z-index: 90;
-  background: rgba(9, 15, 28, 0.92);
-  backdrop-filter: blur(16px);
+  background: rgba(9, 15, 28, 0.95);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -144,20 +143,38 @@ input[type="submit"]:hover {
 
 .brand {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  margin-right: 80px;
+  transition: all 0.3s ease;
+}
+
+.brand__logo {
+  height: 200px;
+  width: auto;
+  transition: height 0.3s ease;
+  flex-shrink: 0;
+  border-radius: 0;
+}
+
+.brand__text {
+  display: flex;
   flex-direction: column;
   gap: 0.2rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.9rem;
-  margin-right: 80px;
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-word;
-  transition: font-size 0.3s ease;
+  opacity: 1;
+  max-width: 400px;
+  transition: opacity 0.3s ease, font-size 0.3s ease, max-width 0.3s ease;
 }
 
-.brand span {
+.brand__text span {
   font-size: 1.1rem;
   letter-spacing: 0.12em;
   transition: font-size 0.3s ease;
@@ -165,8 +182,19 @@ input[type="submit"]:hover {
 
 /* Separación ligera entre apellidos en la marca del header.
     No cambia color ni subrayado; sólo añade espacio entre palabras. */
-.site-header .brand span:first-child {
+.site-header .brand__text span:first-child {
   word-spacing: 0.32rem;
+}
+
+/* Cuando el header se encoge, reducir el logo */
+.site-header__inner--shrunk .brand__logo {
+  height: 150px;
+}
+
+.site-header__inner--shrunk .brand__text {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
 }
 
 .site-nav {
