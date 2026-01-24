@@ -185,6 +185,30 @@ input[type="submit"]:hover {
   color: #fff;
 }
 
+.nav-emergency {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background-color: #e53935;
+  border-radius: 50%;
+  color: #fff !important;
+  transition: transform var(--transition), background-color var(--transition);
+  box-shadow: 0 4px 12px rgba(229, 57, 53, 0.4);
+}
+
+.nav-emergency:hover {
+  background-color: #c62828;
+  transform: scale(1.1) translateY(-2px) !important;
+}
+
+.nav-emergency svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
 .hero {
   padding: clamp(8rem, 15vw, 12rem) 0;
   min-height: 90vh;
@@ -501,6 +525,26 @@ input[type="submit"]:hover {
   box-shadow: var(--shadow-sm);
   display: grid;
   gap: 1.2rem;
+  transition: background-color 0.5s ease;
+}
+
+.contact-form--emergency {
+  background: #e53935 !important;
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.7);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(229, 57, 53, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0);
+  }
 }
 
 .contact-form__grid {
@@ -548,6 +592,11 @@ input[type="submit"]:hover {
   color: #4caf50;
   font-weight: 600;
   margin-top: 0.5rem;
+  transition: color 0.5s ease;
+}
+
+.contact-form--emergency input[type="submit"] {
+  color: #e53935 !important;
 }
 
 .contact-form input[type="submit"]:hover {
