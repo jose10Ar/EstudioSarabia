@@ -151,7 +151,7 @@ input[type="submit"]:hover {
 }
 
 .brand__logo {
-  height: 200px;
+  height: 65px;
   width: auto;
   transition: height 0.3s ease;
   flex-shrink: 0;
